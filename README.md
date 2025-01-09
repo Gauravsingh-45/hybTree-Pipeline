@@ -33,7 +33,7 @@ Raw sequencing reads in FASTQ format. The cleaning and removal of contaminant se
 Along with the reads, users also require a set of reference genes that cab be either nucleotide or amino acid sequences in FASTA format. These reference sequences can be obtained from OrthoDB, OMA browser or custom set of genes expected to be present across all the samples used for constructing phylogenetic tree. The reference sequence file can contain multiple sequences for each locus using sequence IDs. Each sequence ID should include the organism name and the gene identifier, separated by a hyphen.
 
 example of a reference genes file :
-"""
+```plaintext
 >Arabidopsis-atpB
 MATNRAIRLSSMIFILGAFLGAGAVVGSAQGKFVEKIARQPELQGKIRGTLTNSLAFLMG
 >Zea-atpB
@@ -42,4 +42,4 @@ MASTKAIRLSAIVFLGAFLGAGAVVGAAQGKFVEKIARQPELQGKIRGTLTNSLAFLMG
 MASTKEILKAYPETMRRFLVGYQGCTEEYSSLRDGRDLIGNDTGAASTERVLAKYGPRPL
 >Zea-rbcS
 MASTKEVLKAYPETMRRFLVGYQGCTEEYSSLRDGRDLVGNDTGAASTERVLAKYGPRPL
-"""
+```plaintext
