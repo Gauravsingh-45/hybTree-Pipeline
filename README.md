@@ -27,10 +27,10 @@ https://mafft.cbrc.jp/alignment/software/
 http://www.iqtree.org/
 
 # Pipeline Inputs
-1. High Throughput DNA sequencing reads  
+1. High Throughput DNA sequencing reads:  
 Raw sequencing reads in FASTQ format. The cleaning and removal of contaminant sequences will be carried out by Hybtree pipeline.
 
-2. Reference genes  
+2. Reference genes:  
 Along with the reads, users also require a set of reference genes that cab be either nucleotide or amino acid sequences in FASTA format. These reference sequences can be obtained from OrthoDB, OMA browser or custom set of genes expected to be present across all the samples used for constructing phylogenetic tree. The reference sequence file can contain multiple sequences for each locus using sequence IDs. Each sequence ID should include the organism name and the gene identifier, separated by a hyphen. The name of this fasta file needs to be specified in the config file.
 
 example of a reference genes file :
@@ -45,10 +45,10 @@ MASTKEILKAYPETMRRFLVGYQGCTEEYSSLRDGRDLIGNDTGAASTERVLAKYGPRPL
 MASTKEVLKAYPETMRRFLVGYQGCTEEYSSLRDGRDLVGNDTGAASTERVLAKYGPRPL
 ```
 
-3. Samplename File     
+3. Samplename File:  
 A text file with the prefixes of the fastq files (eg: T2 will be the prefix for a file named T2_R1.fq.gz). The prefixes will also be required in config file. The name of this file needs to be specified in the config file.
 
-4. Config File  
+4. Config File:  
 The config file is provided. Provide the number of threads to be used by the pipeline. Fill in appropriate sample names, Specify the Trimmomatic parameters and assembler to be used. Provide paths of the tools.
 
 # Pipeline Outputs
