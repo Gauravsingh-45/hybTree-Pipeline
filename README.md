@@ -63,11 +63,17 @@ The tree_files directory contains allseqs.fas.trerfile, this file is in newick f
 
 The pipline after getting completed, creates multiple directories with intermediate files.  
 -fastqc_output : quality metrices plots in a zip and html file.  
+
 -Trimmomatic_output : Good quality sequencing reads, used as input reads for Hybpiper.  
+
 -Hybpiper_output : Contains a directory for each sample having separate directories for each gene.  
 read more about hybpiper output at : https://github.com/mossmatters/HybPiper/wiki/Results-and-output-files    
+
 -extracted_sequences : FASTA files with exon sequences extracted from each gene.    
+
 -translated_gene_sequences : exon sequences converted into amino acid sequences.  
+
 -nt_aligned_sequences : aligned exon sequences.  
+
 -logs : Directory with stdout and stderr files for each step, useful for debugging purposes.  
 
