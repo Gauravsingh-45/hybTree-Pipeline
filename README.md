@@ -45,10 +45,10 @@ MASTKEILKAYPETMRRFLVGYQGCTEEYSSLRDGRDLIGNDTGAASTERVLAKYGPRPL
 MASTKEVLKAYPETMRRFLVGYQGCTEEYSSLRDGRDLVGNDTGAASTERVLAKYGPRPL
 ```
 
-3. Samplename File
+3. Samplename File  
 A text file with the prefixes of the fastq files (eg: T2 will be the prefix for a file named T2_R1.fq.gz). The prefixes will also be required in config file. The name of this file needs to be specified in the config file.
 
-4. Config File
+4. Config File  
 The config file is provided. Provide the number of threads to be used by the pipeline. Fill in appropriate sample names, Specify the Trimmomatic parameters and assembler to be used. Provide paths of the tools.
 
 # Pipeline Outputs
@@ -61,7 +61,7 @@ Gene recovery heatmap showing length of the recovered exon sequences, where the 
 3. Tree files
 The tree_files directory contains allseqs.fas.trerfile, this file is in newick format and can be visualised using ETE toolkit or iTOl visualiser. The same file can be obtained from the bootstrapped_tree directory with bootstrap support values. Bootstrapped tree files are obtained only if boostrap is set to "yes" in the config file.
 
-The pipline after getting completed, creates multiple directories with intermediate files./n
-fastqc_output : quality metrices plots in a zip and html file./n
-Trimmomatic_output : Good quality sequencing reads, used as input reads for Hybpiper./n
+The pipline after getting completed, creates multiple directories with intermediate files.
+fastqc_output : quality metrices plots in a zip and html file.  
+Trimmomatic_output : Good quality sequencing reads, used as input reads for Hybpiper.  
 Hybpiper_output : Contains 
