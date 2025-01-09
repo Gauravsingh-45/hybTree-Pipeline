@@ -61,19 +61,21 @@ Gene recovery heatmap showing length of the recovered exon sequences, where the 
 3. Tree files:  
 The tree_files directory contains allseqs.fas.trerfile, this file is in newick format and can be visualised using ETE toolkit or iTOl visualiser. The same file can be obtained from the bootstrapped_tree directory with bootstrap support values. Bootstrapped tree files are obtained only if boostrap is set to "yes" in the config file.
 
-The pipline after getting completed, creates multiple directories with intermediate files.  
--fastqc_output : quality metrices plots in a zip and html file.  
+After the pipeline completes, it generates multiple directories containing intermediate files:
 
--Trimmomatic_output : Good quality sequencing reads, used as input reads for Hybpiper.  
+- **fastqc_output**: Contains quality metrics plots provided as both a ZIP file and an HTML file.
+  
+- **Trimmomatic_output**: Includes high-quality sequencing reads, which are used as input for HybPiper.
 
--Hybpiper_output : Contains a directory for each sample having separate directories for each gene.  
-read more about hybpiper output at : https://github.com/mossmatters/HybPiper/wiki/Results-and-output-files    
+- **Hybpiper_output**: This directory has a subdirectory for each sample, with further subdirectories for each gene.  
+  For more details on HybPiper output, visit: [HybPiper Wiki](https://github.com/mossmatters/HybPiper/wiki/Results-and-output-files).
 
--extracted_sequences : FASTA files with exon sequences extracted from each gene.    
+- **extracted_sequences**: Contains FASTA files with exon sequences extracted from each gene.
 
--translated_gene_sequences : exon sequences converted into amino acid sequences.  
+- **translated_gene_sequences**: Includes exon sequences translated into amino acid sequences.
 
--nt_aligned_sequences : aligned exon sequences.  
+- **nt_aligned_sequences**: Contains aligned exon sequences.
 
--logs : Directory with stdout and stderr files for each step, useful for debugging purposes.  
+- **logs**: This directory holds stdout and stderr files for each step, which are useful for debugging.
+
 
