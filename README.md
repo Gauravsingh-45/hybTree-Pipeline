@@ -1,4 +1,4 @@
-# HybTree-Pipeline
+# HybTree
 Here we introduce a pipeline that is designed to construct phylogenetic tree directly by Whole Genome Sequencing reads. Hybtree works by skipping the genome assembly and annotation step, and directly generating high-accuracy species-level trees using reference gene assemblies from across the genome.
 
 # Description of the Pipeline
@@ -53,7 +53,6 @@ example of samplefile:
 T2
 T3
 T4
-
 ```
 
 5. Config File:  
@@ -97,7 +96,7 @@ After the pipeline completes, it generates multiple directories containing inter
 conda activate snakemake
 ```  
 
-4. Making separate conda environmemnts from snakemake wrappers (fastqc and trimmomatic)  
+4. Making separate conda environments from snakemake wrappers (fastqc and trimmomatic)  
 ```plaintext
 snakemake --snakefile Snakefile_1 --use-conda --conda-create-envs-only
 ```  
