@@ -46,9 +46,17 @@ MASTKEVLKAYPETMRRFLVGYQGCTEEYSSLRDGRDLVGNDTGAASTERVLAKYGPRPL
 ```
 
 3. Samplename File:  
-A text file with the prefixes of the fastq files (eg: T2 will be the prefix for a file named T2_R1.fq.gz). The prefixes will also be required in config file. The name of this file needs to be specified in the config file.
+A text file with the prefixes of the fastq files one per line (eg: T2 will be the prefix for a file named T2_R1.fq.gz). The prefixes will also be required in config file. The name of this file needs to be specified in the config file.
 
-4. Config File:  
+example of samplefile:
+```plaintext
+T2
+T3
+T4
+
+```
+
+5. Config File:  
 The config file is provided. Provide the number of threads to be used by the pipeline. Fill in appropriate sample names, Specify the Trimmomatic parameters and assembler to be used. Provide paths of the tools.
 
 # Pipeline Outputs
@@ -78,4 +86,28 @@ After the pipeline completes, it generates multiple directories containing inter
 
 - **logs**: This directory holds stdout and stderr files for each step, which are useful for debugging.
 
+# Pipeline Usage
 
+1. Ensure the scripts directory, catsequences, Snakefile_1, Snakefile_2, Snakefile.smk and config.yaml are present in a directory.  
+
+2. Edit and fill in the config file completely.  
+
+3. activate the snakemake environment:  
+```plaintext
+conda activate snakemake
+```  
+
+4. Making separate conda environmemnts from snakemake wrappers (fastqc and trimmomatic)  
+```plaintext
+snakemake --snakefile Snakefile_1 --use-conda --conda-create-envs-only
+```  
+
+5. Perform a dry run first to ensure the pipeline is working properly and no errors are seen.  
+```plaintext
+snakemake --snakefile Snakefile.smk -n
+```  
+
+6. Let's run the pipeline  
+```plaintext
+snakemake --snakefile Snakefile.smk --use-conda
+```  
